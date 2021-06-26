@@ -2,14 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 // Importar controladores
-const UserController = require('./controllers/UserController');
-const AddressController = require('./controllers/AddressController');
+const CitiesController = require('./controllers/CitiesController');
+const PharmaciesController = require('./controllers/PharmaciesController');
 
 // Home
 router.get('/', (req, res) => res.json({ msg: "Bienvenido..." }));
 
-// Users
-router.get('/cities', UserController.all);
-router.get('/pharmacies', AddressController.all);
+router.get('/cities', CitiesController.all);
+router.get('/pharmacies', PharmaciesController.all);
 
 module.exports = router;
